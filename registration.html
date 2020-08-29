@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Registration</title>
+        <link rel="stylesheet" type="text/css" href="registration.css">
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <a id="logo" href="https://www.iiit.ac.in/" target="_blank"><img src="https://www.iiit.ac.in/img/iiit-new.png"></a>
+        <a href="https://serc.iiit.ac.in/rdip" target="_blank"><b>RDIP</b></a><br>
+        <br>
+        <br>
+        <ul class="bar">
+            <li class="nav"><a href="homepage.html">Home</a></li>
+            <li class="nav"><a href="registration.html">Registration Form</a></li>
+        </ul><br>
+        <form method="get" action="details.html">
+        <table cellpadding="12">
+            <tr>
+                <td class="center">
+                    <b>First name:</b>
+                </td>
+                <td class="width"><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+                <td class="center">
+                    <b>E-mail:</b>
+                </td>
+                <td class="width"><input type="email" id="e-mail" name="e-mail" required></td>
+            </tr>
+            <tr>
+                <td class="center">
+                    <b>Phone No:</b>
+                </td>
+                <td class="width"><input type="tel" id="phone" name="phone" required></td>
+            </tr>
+            <tr>
+                <td class="center">
+                    <b>Gender:</b>
+                </td>
+                <td class="width"><input type="radio" id="male" name="gender" required>Male
+                    <input type="radio" id="female" name="gender">Female
+                    <input type="radio" id="other" name="gender">Other
+                </td>
+            </tr>
+            <tr>
+                <td class="center"><b>Reason for RDIP:</b></td>
+                <td class="width"><input type="checkbox" id="html" name="reason">HTML 
+                    <input type="checkbox" id="css" name="reason">CSS 
+                    <input type="checkbox" id="js" name="reason">JavaScript
+                </td>
+
+            </tr>
+            <tr>
+                <td class="center"><b>College:</b></td>
+                <td class="width"><input type="text" id="clg" name="college" required></td>
+            </tr>
+        </table>
+        
+        <input id="margin" type="checkbox" id="declare" name="declare" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I declare above details given by me are true<br>
+        <br>
+        <input id="marg" type="submit" value="Submit">
+        <input type="reset" value="Reset" style="margin-left:150px;">
+       </form>
+    </body>
+</html>
