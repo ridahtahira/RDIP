@@ -13,13 +13,13 @@
             <li class="nav"><a href="homepage.html">Home</a></li>
             <li class="nav"><a href="registration.html">Registration Form</a></li>
         </ul><br>
-        <form method="get" action="details.html">
+        <form name="F1" method="get" action="details.html">
         <table cellpadding="12">
             <tr>
                 <td class="center">
                     <b>First name:</b>
                 </td>
-                <td class="width"><input type="text" id="name" name="name" pattern="[A-Za-z]{50}" required></td>
+                <td class="width"><input type="text" id="name" name="name" pattern="[A-Za-z\s]+{50}" required></td>
             </tr>
             <tr>
                 <td class="center">
@@ -31,7 +31,7 @@
                 <td class="center">
                     <b>Phone No:</b>
                 </td>
-                <td class="width"><input type="tel" id="phone" name="phone" required></td>
+                <td class="width"><input type="tel" id="phone" name="phone" required pattern=[0-9]{10}></td>
             </tr>
             <tr>
                 <td class="center">
@@ -44,11 +44,12 @@
             </tr>
             <tr>
                 <td class="center"><b>Reason for RDIP:</b></td>
-                <td class="width"><input type="checkbox" id="html" name="reason">HTML 
-                    <input type="checkbox" id="css" name="reason">CSS 
-                    <input type="checkbox" id="js" name="reason">JavaScript
+                <div class="checkbox-group required">
+                <td class="width"><input type="checkbox" id="html" name="reason" value=c1 >HTML 
+                    <input type="checkbox" id="css" name="reason" value=c2>CSS 
+                    <input type="checkbox" id="js" name="reason" value=c3>JavaScript
                 </td>
-
+                </div>
             </tr>
             <tr>
                 <td class="center"><b>College:</b></td>
@@ -56,10 +57,11 @@
             </tr>
         </table>
         
-        <input id="margin" type="checkbox" id="declare" name="declare" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I declare above details given by me are true<br>
+        <input id="margin" type="checkbox" id="declare" name="declare"  onclick="terms_changed(this);valthisform()"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I declare above details given by me are true<br>
         <br>
-        <input id="marg" type="submit" value="Submit">
+        <input id="marg" type="submit" value="Submit" disabled>
         <input type="reset" value="Reset" style="margin-left:150px;">
        </form>
+       <script src="registraion.js"></script>
     </body>
 </html>
